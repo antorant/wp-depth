@@ -1,0 +1,83 @@
+.ui__bg { transition: background-color .3s; }
+.ui__border { transition: border-color .3s; }
+.ui__text { transition: color .3s; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: background-color .6s;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.controls {
+  margin: 0 auto;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.depth-control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.depth-control__slider {
+  flex-grow: 1;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 8px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: none;
+  opacity: .5;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-image: url('../img/whale.png');
+  background-size: 100%;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 32px;
+  cursor: pointer;
+  background-color: transparent;
+  /* border-bottom: 1px solid black; */
+}
+
+input[type=range]:focus {
+  opacity: 1;
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+  /* border-bottom: 1px solid dodgerblue; */
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  /* background-color: dodgerblue; */
+}
+
+.depth-control__readout { width: 100%; }
+
+.depth-control__readout-value {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
